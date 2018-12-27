@@ -1,30 +1,44 @@
-html, body{
+html,
+body {
 	margin: 0;
 	padding: 0;
 	background: white;
-
+	overflow-x: hidden
 
 }
 
-
-nav .current a{
+nav .current a {
 	border-bottom: #e40035 solid 2px;
 }
 
-header{
+h1,
+h2,
+h3 {
+
+	font-family: "century gothic";
+}
+
+img {
+	pointer-events: none
+}
+
+header {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
 	/* min-height: 100vh; */
-	border-bottom: #e40035 solid 3px;
+	/* border-bottom: #e40035 solid 3px; */
+	margin-bottom: 90px;
 }
 
-strong{
+strong {
 	color: #e40035;
 }
 
-.logo{
+
+/* main page */
+.logo {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -33,14 +47,14 @@ strong{
 
 }
 
-.logo .background{
+.logo .background {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	background: url("/Verwenbar/DSC00637.jpg");
 }
 
-header .logo h1{
+header .logo h1 {
 	margin: auto;
 	padding-top: 100px;
 	text-align: center;
@@ -49,80 +63,87 @@ header .logo h1{
 	margin-top: 0;
 }
 
-header .logo img{
-
+nav{
+	position: fixed;
+	width: 100%
 }
 
-header nav{
-	z-index: 999;
-	position: fixed;
+
+header nav #navbar{
+	z-index: 900;
 	list-style-type: none;
 	background-color: #fffffff0;
 	display: inline-flex;
 	width: 100%;
-	justify-content: flex-end;
+	justify-content: space-around;
+	transition: 1s;
 
 }
 
-header nav ul, nav li, nav a{
+header nav ul,
+nav li,
+nav a {
 	margin: 0;
 
 }
 
-header nav a{
+header nav a {
 	color: black;
 	text-decoration: none;
 	font-family: "century gothic";
-	font-size: 1.2em;
+	font-size: 1em;
+}
+
+header nav .icon {
+	align-content: flex-start
 }
 
 
-header nav li{
-	padding: 1em 01em;
+header nav li {
+	padding: 1em 0.5em;
 }
 
-footer{
+footer {
 	display: inline-block;
 	width: 100%;
 	height: 60px;
 	background-color: #e40035;
 	overflow: hidden;
 }
-footer a{
+
+footer a {
 	color: white;
 	text-decoration: none;
 	font-family: 'century gothic';
 	padding: 1em;
 }
 
-footer .left{
-	float:left;
+footer .left {
+	float: left;
 	height: auto;
 
 }
-footer .right{
+
+footer .right {
 	float: right;
 }
-@media only screen and (min-width: 40.0625em){
-	
-}
 
 
 
-
-.content{
+.content {
 	min-height: 100vh;
 	width: 100%;
 	color: black;
 
 }
-.content .container{
+
+.content .container {
 	width: 100%;
 	height: auto;
 	/* background: white; */
 }
 
-.text{
+.text {
 	height: auto;
 	text-align: center;
 	font-size: 1.2em;
@@ -130,7 +151,8 @@ footer .right{
 
 
 }
-.text p{
+
+.text p {
 	font-family: 'arial';
 	margin: 0;
 	width: 80%;
@@ -140,25 +162,52 @@ footer .right{
 
 /* colors */
 
-.container h2{
-	color:black;
+.container h2 {
+	color: black;
 }
 
-.col1{
-	background-color:#dcdcdc;
-	color:black
+.col1 {
+	background-color: #dcdcdc;
+	color: black
 }
-.col2{
+
+.col2 {
 	background-color: #f5f2eb;
 }
-.col3{
-	background-color: #e40035; color: white;
+
+.col3 {
+	background-color: #e40035;
+	color: white;
 }
+
+
+
+
+
+
+
+/* Title */
+
+
+.title {
+	padding: 1% 5%;
+	width: 90%;
+}
+
+.title h2 {
+	font-weight: normal;
+	font-size: 2em;
+	font-family: "century gothic";
+	margin: 0;
+	/* border-bottom: solid 2px #e40035; */
+}
+
+/* image element */
 
 
 /* Images ellement */
 
- .images .elements{
+.images .elements {
 	padding: 1% 5%;
 	display: flex;
 	flex-flow: row-reverse;
@@ -167,50 +216,34 @@ footer .right{
 	justify-content: space-around;
 }
 
- .images .elements .el{
+.images .elements .el {
 	margin-bottom: 20px;
 	height: 200px;
-	background-color: blue;
 	overflow: hidden;
 	position: relative;
 	width: 25%;
 	flex-basis: 350px;
-}
-
-.angebote .elements .el{
-	width: 100px;
-	height: 400px;
-	background: red;
-	flex-basis: 400px;
-	opacity: 0.2;
-}
-
-img{
-	pointer-events: none
-}
-
-.angebote .elements .el:hover{
-	opacity: 1;
-}
-
-/* Mobile version */
-@media only screen and (max-width: 800px) {
-	.list .elements .el{
-		display: block;
-	}
-
+	transition: 1s
 }
 
 
- .images .elements .el img{
+.images .elements .el:hover {
+	transform: scale(1.07);
+	transition: 1s;
+	/* border: solid 1px rgb(138, 138, 138) */
+	cursor: pointer;
+	box-shadow: 0 0 50px 5px black
+}
+
+.images .elements .el img {
 	z-index: 1;
 	min-height: 200px;
 	margin-left: auto;
-	height: 100%;
-	width: auto;
+	width: 100%;
+	height: auto;
 }
 
- .images .elements .el h2{
+.images .elements .el h2 {
 	z-index: 2;
 	position: absolute;
 	background: #f2f2f280;
@@ -218,10 +251,10 @@ img{
 	margin: 0;
 	top: 0px;
 	width: 100%;
-	font-family: "century gothic";
 	font-weight: normal;
 }
-.images .elements .el h1{
+
+.images .elements .el h1 {
 	z-index: 2;
 	background: #f2f2f280;
 	border-bottom: solid 2px #e40035;
@@ -234,38 +267,66 @@ img{
 	font-weight: normal;
 }
 
-
-
-
-.images .elements .el p {
-	position: absolute;
-	top: 5.5em;
-}
-
-/* Title */
-
-
-.title{
-	padding: 1% 5% ;
-	width: 90%;
-}
-
-.title h2{
-	font-weight: normal;
-	font-size: 2em;
-	font-family: "century gothic";
+.images .elements .el h3 {
+	z-index: 2;
+	background: #f2f2f280;
+	border-bottom: solid 2px #e40035;
+	padding: 10px 0;
 	margin: 0;
-	/* border-bottom: solid 2px #e40035; */
+	font-size: 1em;
+	width: 100%;
+	font-family: "century gothic";
+	font-weight: normal;
 }
 
+/* persone */
+
+.personen {
+	width: 20%;
+}
+
+.personen .elements {}
+
+.personen .elements .el {
+	width: auto;
+	height: auto;
+	flex-basis: 200px
+}
+
+.personen .elements .el:hover {
+	transform: scale(1);
+	transition: 1s;
+	/* border: solid 1px rgb(138, 138, 138) */
+	cursor: unset;
+	box-shadow: none
+}
+
+/* angebote */
+
+.angebote .elements .el {
+	width: 100px;
+	height: auto;
+	flex-basis: 400px;
+	transition: 1s
+}
+
+.angebote .elements .el h1,
+.angebote .elements .el p {
+	position: relative;
+}
+
+.angebote .elements .el p {
+	margin: 10px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
 
 /* List element */
 
 
 
-.list .elements{
+.list .elements {
 	font-family: 'century gothic';
-	display:flex;
+	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	width: 80%;
@@ -274,7 +335,7 @@ img{
 	justify-content: center;
 }
 
-.list .elements .el{
+.list .elements .el {
 	display: flex;
 	padding: 1em;
 	height: auto;
@@ -283,22 +344,24 @@ img{
 
 }
 
-.list .elements .el a{
+.list .elements .el a {
 	font-weight: bolder;
 	font-size: 1em;
 	text-decoration: none;
 	color: inherit;
 }
-.list .elements .el p{
+
+.list .elements .el p {
 	margin-left: 1em;
+
 }
 
 
-.slideshow{
+.slideshow {
 	min-height: 100vh;
 	background: url('/Verwenbar/DSC09693.jpg');
 	background-size: cover;
-	background-position:center;
+	background-position: center;
 	width: 100%;
 	animation: slideshow alternate infinite ease-in-out;
 	animation-duration: 10s;
@@ -309,22 +372,50 @@ img{
 
 @keyframes slideshow {
 
-33%{
-	background: url("/Verwenbar/DSC09650.jpg");
-	background-size: cover;
-	background-position:center;
-}
-66%{
-	background: url("/Verwenbar/DSC00637.jpg") ;
-	background-size: cover;
-	background-position:center;
+	33% {
+		background: url("/Verwenbar/DSC09650.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+
+	66% {
+		background: url("/Verwenbar/DSC00637.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+
+	100% {
+		background: url("/Verwenbar/DSC09699.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+
+
 }
 
-100%{
-	background: url("/Verwenbar/DSC09699.jpg");
-	background-size: cover;
-	background-position:center;
+.dropdown a{
+	padding: 1em;
+	font-size: 3em;
 }
 
+.dropdown {
+	border-bottom: #e40035 solid 3px;
+	position: relative;
+	display: block;
+	margin: 10px 5px;
+	cursor: pointer;
+	width: 100%;
+	text-align: right;
+
+}
+
+#navbar {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	text-align: right;
+}
+
+@media only screen and (max-width: 900px) {
 
 }
